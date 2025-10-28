@@ -19,7 +19,7 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -53,6 +53,7 @@ span {
 .navbar {
   background: url(/assets/imgs/TEX\ 1.png);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   padding: 9px 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -93,13 +94,12 @@ span {
   border-radius: 4px;
 }
 
-.navbar-toggler{
+.navbar-toggler {
   border: 2px solid var(--primary-color);
 }
 
 /* Hero Section */
 .hero-section {
-  background: url(/assets/imgs/foto-hero-section2.jpg);
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
@@ -244,7 +244,7 @@ span {
 
 /* Inicio */
 
-.sec-proyectos{
+.sec-proyectos {
   background: url(/assets/imgs/TEX\ 3.png);
   background-size: cover;
   background-position: center;
@@ -415,7 +415,7 @@ span {
 }
 
 .servicios-card a {
-  margin-top: 50px
+  margin-top: 50px;
 }
 
 /* Características */
@@ -495,8 +495,8 @@ span {
   background-attachment: fixed;
 }
 
-#footer-container{
-  display:flex;
+#footer-container {
+  display: flex;
   justify-content: center;
 }
 
@@ -550,7 +550,7 @@ span {
   color: var(--primary-color);
 }
 
-#mundodesarrollo{
+#mundodesarrollo {
   margin-top: 15px;
   text-decoration: none;
   color: var(--white);
@@ -585,6 +585,27 @@ span {
   .cta-description {
     font-size: 1rem;
   }
+
+  .grid-inicio {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 95vh);
+    gap: 2rem;
+  }
+
+  .navbar-toggler {
+    margin-right: 25px;
+  }
+
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 70%;
+    border-radius: 4px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -615,6 +636,160 @@ span {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Overrides específicos para Trabajos (sin modificar reglas existentes) */
+@media (max-width: 1200px) {
+  /* En pantallas tipo iPad vertical y laptops chicas: 1 columna */
+  .grid-trabajos {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  /* Altura más contenida del carrusel en este rango */
+  .estructura-imagen img {
+    height: 320px;
+  }
+}
+@media (max-width: 992px) {
+  /* Forzar 1 columna para cada tarjeta de trabajo */
+  .estructura-trabajos {
+    grid-template-columns: 1fr;
+  }
+  /* Evitar filas forzadas en la grilla principal y asegurar 1 columna */
+  .grid-trabajos {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Asegurar columna única y filas auto también en móviles */
+  .grid-trabajos {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  /* Altura más contenida para las imágenes del carrusel dentro de trabajos */
+  .estructura-imagen img {
+    height: 240px;
+  }
+}
+
+/* Responsive – mejoras adicionales sin modificar reglas existentes */
+@media (max-width: 1200px) {
+  .carousel-item img {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Evitar dos columnas estrechas y alturas forzadas */
+  .grid-inicio {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  /* Ajuste de media modal en tablets */
+  .modal-content {
+    width: 85%;
+    height: 80%;
+  }
+
+  /* Grilla de trabajos a una columna */
+  .estructura-trabajos {
+    grid-template-columns: 1fr;
+  }
+
+  /* Carruseles más bajos en pantallas medianas */
+  .carousel-item img {
+    height: 45vh;
+  }
+
+  /* Mapa más bajo en pantallas medianas */
+  .map-container {
+    height: 60vh;
+  }
+
+  /* Fondos con parallax a scroll en móviles/tablets por performance */
+  .page-hero-servicios,
+  .page-hero-nosotros,
+  .page-hero-contacto,
+  .features-section,
+  .sec-proyectos,
+  .map-bg,
+  .footer {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Eliminar filas de 95vh en tarjetas de inicio */
+  .grid-inicio {
+    grid-template-rows: auto;
+  }
+
+  /* Altura de imagen de servicio más contenida en móviles */
+  .service-img {
+    height: 240px;
+  }
+
+  /* Grilla de trabajos más fluida y compacta */
+  .grid-trabajos {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  /* Imágenes de estructuras con menor altura */
+  .estructura-imagen img {
+    height: 260px;
+  }
+
+  .estructura-trabajos {
+    grid-template-columns: 1fr;
+  }
+
+  /* Mapa más bajo en móviles */
+  .map-container {
+    height: 50vh;
+  }
+
+  /* Pilares a columna, sin forzar alturas */
+  .mvv-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .mvv-card-border {
+    margin: 15px;
+    padding: 15px;
+    transition: var(--transition);
+    width: 85%;
+    height: 85%;
+}
+
+}
+
+@media (max-width: 576px) {
+  /* Carruseles compactos en móviles pequeños */
+  .carousel-item img {
+    height: 220px;
+  }
+
+  /* Mapa aún más bajo en móviles pequeños */
+  .map-container {
+    height: 320px;
+  }
+
+  /* Imágenes de servicios más compactas */
+  .service-img {
+    height: 200px;
+  }
+
+  /* Título de CTA menor para evitar saltos */
+  .cta-title {
+    font-size: 1.8rem;
   }
 }
 
@@ -665,19 +840,19 @@ html {
   z-index: 2;
 }
 
-#carouselExampleIndicators{
+#carouselExampleIndicators {
   height: 90vh;
   border: 5px solid var(--light-gray);
   padding: 15px;
   transition: var(--transition);
 }
 
-#carouselExampleIndicators:hover{
+#carouselExampleIndicators:hover {
   border: 5px solid var(--primary-color);
   transition: var(--transition);
 }
 
-.carousel-inner{
+.carousel-inner {
   height: 100%;
 }
 
@@ -688,11 +863,21 @@ html {
   object-position: center;
 }
 
-.carousel-indicators li{
-  background-color:var(--primary-color);
+.carousel-indicators li {
+  background-color: var(--primary-color);
 }
 
-.mvv-section{
+.carousel a.carousel-control-prev,
+.carousel a.carousel-control-next {
+  scroll-behavior: auto;
+}
+
+.carousel a.carousel-control-prev:focus,
+.carousel a.carousel-control-next:focus {
+  outline: none;
+}
+
+.mvv-section {
   background: url(/assets/imgs/TEX\ 3.png);
   background-size: cover;
   background-position: center;
@@ -700,14 +885,14 @@ html {
   padding-top: 70px;
 }
 
-.mvv-container{
+.mvv-container {
   display: flex;
   align-items: center;
   height: 95vh;
 }
 
 .mvv-card {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   background: var(--white);
@@ -715,31 +900,33 @@ html {
   padding: 15px;
   text-align: center;
   height: 100%;
-  gap:25px;
+  gap: 25px;
   border-radius: 5px;
   transition: var(--transition);
 }
 
-#card1{
+#card1 {
   border-bottom: 5px solid var(--light-gray);
   border-left: 5px solid var(--light-gray);
 }
 
-#card2{
+#card2 {
   border-bottom: 5px solid var(--light-gray);
 }
 
-#card3{
+#card3 {
   border-bottom: 5px solid var(--light-gray);
   border-right: 5px solid var(--light-gray);
 }
 
-#card1:hover, #card2:hover, #card3:hover{
+#card1:hover,
+#card2:hover,
+#card3:hover {
   border-color: var(--primary-color);
 }
 
-.mvv-card p{
-  margin:0;
+.mvv-card p {
+  margin: 0;
 }
 
 .mvv-card-border:hover {
@@ -748,11 +935,11 @@ html {
   transition: var(--transition);
 }
 
-.mvv-card-border{
+.mvv-card-border {
   margin: 15px;
   padding: 15px;
   transition: var(--transition);
-  width:50%;
+  width: 50%;
   height: 85%;
 }
 
@@ -787,7 +974,7 @@ html {
 /* Quienes somos ahora */
 
 .somos-container {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
@@ -796,20 +983,20 @@ html {
 }
 
 .bg-video {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  filter: brightness(0.5); 
+  filter: brightness(0.5);
 }
 
-.somos-container a{
+.somos-container a {
   position: relative;
   z-index: 50;
 }
 
-.overlay{
+.overlay {
   position: absolute;
   z-index: 50;
   width: 100%;
@@ -818,12 +1005,12 @@ html {
   border-left: 5px solid var(--primary-color);
 }
 
-.somos-content{
+.somos-content {
   color: var(--white);
-  gap:20px;
+  gap: 20px;
 }
 
-.somos-content h2{
+.somos-content h2 {
   margin-bottom: 15px;
 }
 
@@ -1004,11 +1191,11 @@ html {
 /* Trabajos realizados */
 
 .grid-trabajos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-    border: 5px solid var(--primary-color);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  border: 5px solid var(--primary-color);
 }
 
 .estructura-trabajos {
@@ -1159,7 +1346,7 @@ html {
 
 /* Mapa */
 
-.map-bg{
+.map-bg {
   background: url(/assets/imgs/TEX\ 2.png);
   background-size: cover;
   background-position: center;
