@@ -159,7 +159,7 @@ document.addEventListener('click', (e) => {
     "/assets/imgs/cocina-aluminio.jpeg",
     "/assets/imgs/DSC00919.jpg",
     "/assets/imgs/cerramiento-aluminio.jpg",
-    "/assets/imgs/.jpg"
+    "/assets/imgs/puerta-aluminio.webp"
   ]
   );
 
@@ -169,11 +169,11 @@ document.addEventListener('click', (e) => {
   'Trabajos en acero',
   'Ofrecemos servicios especializados en trabajos con acero, un material conocido por su durabilidad y resistencia. Desde la fabricación de estructuras metálicas hasta la creación de piezas personalizadas, nuestro equipo utiliza técnicas avanzadas para garantizar resultados de alta calidad en cada proyecto.',
   [
-    "/assets/imgs/balcon-acero.jpeg",
-    "/assets/imgs/marquesina-acero.jpeg",
-    "/assets/imgs/parrilla-acero.avif",
+    "/assets/imgs/balcon-acero.webp",
+    "/assets/imgs/marquesina-acero.webp",
+    "/assets/imgs/parrilla-acero.webp",
     "/assets/imgs/reja-acero.avif",
-    './assets/imgs/escalera2-acero.jpeg'
+    '/assets/imgs/escalera2-acero.webp'
   ]
   );
   }
@@ -181,11 +181,11 @@ document.addEventListener('click', (e) => {
     mostrarModal('Corte y plegado',
   'Contamos con tecnología avanzada para el corte y plegado de metales, permitiéndonos ofrecer soluciones precisas y eficientes para una amplia variedad de aplicaciones industriales y comerciales. Nuestro equipo está capacitado para manejar diferentes tipos de materiales, asegurando acabados de alta calidad y adaptados a las necesidades específicas de cada cliente.',
   [
-    './assets/imgs/plegado-img.avif',
-    './assets/imgs/DSC00933.jpg',
-    './assets/imgs/plegado-modal-img.avif',
-    './assets/imgs/plegado-modal-img2.avif',
-    './assets/imgs/DSC00899.jpg'
+    '/assets/imgs/plegado-img.avif',
+    '/assets/imgs/DSC00933.jpg',
+    '/assets/imgs/plegado-modal-img.avif',
+    '/assets/imgs/plegado-modal-img2.avif',
+    '/assets/imgs/DSC00899.jpg'
   ]
   );
   }
