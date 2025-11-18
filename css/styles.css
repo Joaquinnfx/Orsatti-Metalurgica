@@ -653,8 +653,6 @@ span,
 
 /* CAROUSEL SOBRE NOSOTROS*/
 #carouselExampleIndicators {
-  height: 90vh;
-
   border: 5px solid var(--light-gray);
   padding: 15px;
   transition: var(--transition);
