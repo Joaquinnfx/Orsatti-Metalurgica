@@ -189,4 +189,16 @@ document.addEventListener('click', (e) => {
   ]
   );
   }
+  if (e.target.id === 'sold-modal') {
+    mostrarModal('Soldadura en acero inoxidable',
+  'Contamos con tecnología avanzada para el corte y plegado de metales, permitiéndonos ofrecer soluciones precisas y eficientes para una amplia variedad de aplicaciones industriales y comerciales. Nuestro equipo está capacitado para manejar diferentes tipos de materiales, asegurando acabados de alta calidad y adaptados a las necesidades específicas de cada cliente.',
+  [
+    '/assets/imgs/DSC01056.jpg',
+    '/assets/imgs/DSC00921.jpg',
+    '/assets/imgs/DSC00963.jpg',
+    '/assets/imgs/DSC00970.jpg',
+    '/assets/imgs/DSC01021.jpg'
+  ]
+  );
+  }
 });

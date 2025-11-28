@@ -729,7 +729,8 @@ span,
 
 #carousel1,
 #carousel2,
-#carousel3 {
+#carousel3,
+#carousel4 {
   height: 90vh;
   border: 5px solid var(--light-gray);
   padding: 0;
@@ -739,7 +740,8 @@ span,
 
 #carousel1:hover,
 #carousel2:hover,
-#carousel3:hover {
+#carousel3:hover,
+#carousel4:hover  {
   border: 5px solid var(--primary-color);
   transition: var(--transition);
 }
@@ -1029,14 +1031,14 @@ span,
   border: 5px solid var(--light-gray);
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  transition: var(--transition);
+  transition: all 0.4s ease;
 }
 
 .estructura-trabajos:hover {
   transform: translateY(-5px);
   border: 5px solid var(--primary-color);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-  transition: var(--transition);
+  transition: all 0.4s ease;
 }
 
 .estructura-imagen img {
@@ -1429,7 +1431,8 @@ span,
 
   #carousel1,
   #carousel2,
-  #carousel3 {
+  #carousel3,
+  #carousel4 {
     height: 100%;
     border: 5px solid var(--light-gray);
     padding: 15px;
@@ -1438,7 +1441,8 @@ span,
 
   #carousel1:hover,
   #carousel2:hover,
-  #carousel3:hover {
+  #carousel3:hover,
+  #carousel4:hover {
     border: 5px solid var(--primary-color);
     transition: var(--transition);
   }
