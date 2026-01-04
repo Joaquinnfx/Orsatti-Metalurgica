@@ -501,7 +501,7 @@ span,
 
 /* CTA Section */
 .cta-section {
-  background: url(/assets/imgs/foto3-fondo-cta.jpg);
+  background: url(/assets/imgs/foto3-fondo-cta.webp);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
